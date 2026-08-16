@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Sitara — Every Star Matters</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:#fffaf7;color:#29294f;line-height:1.6}
+a{color:inherit}
+
+header{position:sticky;top:0;z-index:100;background:rgba(255,250,247,.95);border-bottom:1px solid #eee5e8}
+.navbar{max-width:1100px;margin:auto;padding:18px 6%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Playfair Display',serif;font-size:23px;text-decoration:none;color:#29294f}
+.logo span{color:#e39aa8}
+nav{display:flex;gap:22px}
+nav a{text-decoration:none;color:#29294f;font-size:14px}
+nav a:hover{color:#d995a4}
+
+.hero{min-height:88vh;display:flex;justify-content:center;align-items:center;text-align:center;padding:60px 20px;background:radial-gradient(circle at 10% 15%,#ded8f2 0 100px,transparent 101px),radial-gradient(circle at 90% 85%,#f7d9df 0 120px,transparent 121px),#fffaf7}
+.hero-content{max-width:750px}
+.stars{font-size:28px;letter-spacing:12px;color:#aaa0df;margin-bottom:20px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(50px,11vw,95px);font-weight:500;line-height:1}
+.hero h1 span{color:#e39aa8}
+.tagline{font-family:'Playfair Display',serif;font-size:29px;margin-top:12px}
+.hero p{margin:22px auto 30px;max-width:580px;color:#62627d}
+.button{display:inline-block;padding:14px 28px;background:#aaa0df;color:white;text-decoration:none;border-radius:30px;font-weight:600;box-shadow:0 8px 20px rgba(80,70,130,.15)}
+
+section{padding:80px 7%}
+.container{max-width:1050px;margin:auto}
+.heading{text-align:center;margin-bottom:45px}
+.heading h2,.about h2{font-family:'Playfair Display',serif;font-size:42px;font-weight:500}
+.heading p{max-width:650px;margin:10px auto;color:#666680}
+
+.about{background:#eeeafa}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about h2{margin-bottom:20px}
+.about p{color:#5f5f79;margin-bottom:18px}
+.star-card{background:white;padding:50px 30px;border-radius:30px;text-align:center;box-shadow:0 15px 35px rgba(60,50,100,.08)}
+.big-star{font-size:85px;color:#e6c98b}
+.star-card h3{font-family:'Playfair Display',serif;font-size:28px;margin:10px 0}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;padding:30px;border-radius:25px;border:1px solid #eee6e8;box-shadow:0 8px 25px rgba(50,40,90,.05)}
+.card-icon{font-size:30px;margin-bottom:15px}
+.card h3{font-family:'Playfair Display',serif;font-size:23px;margin-bottom:10px}
+.card p{font-size:14px;color:#666680}
+
+.conditions{background:#faf7fc}
+.condition{background:white;padding:22px;margin-bottom:15px;border-radius:20px;display:flex;gap:20px;align-items:center;box-shadow:0 5px 18px rgba(50,40,90,.05)}
+.condition-icon{min-width:55px;height:55px;border-radius:50%;background:#e5def5;display:flex;justify-content:center;align-items:center;font-size:22px}
+.condition h3{font-family:'DM Sans',sans-serif;font-size:17px}
+.condition p{font-size:14px;color:#707087}
+
+.quote{text-align:center;background:linear-gradient(135deg,#eeeafa,#fff0f2)}
+.quote h2{font-family:'Playfair Display',serif;font-size:40px;font-weight:500}
+.quote span{color:#df98a6}
+
+.story{background:white;padding:28px;margin-bottom:18px;border-radius:20px;border-left:5px solid #e3a1ad}
+.story p{color:#606079}
+.story small{display:block;margin-top:10px;color:#aaa0df}
+
+.resources{background:#fff0f2}
+.contact{text-align:center}
+.contact-box{max-width:700px;margin:auto;background:#eeeafa;padding:50px 25px;border-radius:30px}
+.contact-box h2{font-family:'Playfair Display',serif;font-size:38px;font-weight:500;margin-bottom:15px}
+.contact-box p{color:#666680;margin-bottom:25px}
+
+footer{background:#29294f;color:white;text-align:center;padding:40px 20px}
+footer h3{font-family:'Playfair Display',serif;font-size:27px}
+footer span{color:#efaab6}
+footer p{font-size:13px;opacity:.8}
+
+@media(max-width:750px){
+    nav{display:none}
+    .about-grid{grid-template-columns:1fr}
+    .cards{grid-template-columns:1fr}
+    section{padding:65px 6%}
+    .heading h2,.about h2{font-size:34px}
+    .quote h2{font-size:30px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="navbar">
+<a href="#home" class="logo">✦ Project <span>Sitara</span></a>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About Autism</a>
+<a href="#neurodiversity">Neurodiversity</a>
+<a href="#conditions">Conditions</a>
+<a href="#resources">Resources</a>
+<a href="#stories">Stories</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="stars">✦ ✧ ✦ ✧ ✦</div>
+<h1>Project <span>Sitara</span></h1>
+<div class="tagline">Every star matters.</div>
+<p>A space to learn, understand and explore autism and neurodiversity.</p>
+<a href="#about" class="button">Begin Exploring ✦</a>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="container">
+<div class="about-grid">
+<div>
+<h2>Understanding Autism</h2>
+<p>Autism is a neurodevelopmental difference that can influence communication, interaction, learning and sensory experiences.</p>
+<p>Every autistic person is different. There is no single way to experience autism.</p>
+<a href="#neurodiversity" class="button">Explore Neurodiversity</a>
+</div>
+<div class="star-card">
+<div class="big-star">☆</div>
+<h3>Different minds.<br>Limitless potential.</h3>
+<p>Every person has their own strengths, interests and way of seeing the world.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="neurodiversity">
+<div class="container">
+<div class="heading">
+<h2>Neurodiversity</h2>
+<p>Human brains can work, learn and experience the world in many different ways.</p>
+</div>
+<div class="cards">
+<div class="card"><div class="card-icon">∞</div><h3>Different Minds</h3><p>There isn't one single way a brain should think, learn or communicate.</p></div>
+<div class="card"><div class="card-icon">✦</div><h3>Unique Strengths</h3><p>Different ways of thinking can come with unique strengths and perspectives.</p></div>
+<div class="card"><div class="card-icon">♡</div><h3>Every Individual</h3><p>Neurodivergent people have individual experiences, needs and strengths.</p></div>
+</div>
+</div>
+</section>
+
+<section class="conditions" id="conditions">
+<div class="container">
+<div class="heading">
+<h2>Conditions &amp; Differences</h2>
+<p>Explore information about different neurodevelopmental conditions.</p>
+</div>
+
+<div class="condition"><div class="condition-icon">🧠</div><div><h3>ADHD</h3><p>A neurodevelopmental condition that can affect attention, activity and impulse control.</p></div></div>
+<div class="condition"><div class="condition-icon">✧</div><div><h3>Tourette Syndrome</h3><p>A neurological condition involving involuntary motor and vocal tics.</p></div></div>
+<div class="condition"><div class="condition-icon">∞</div><div><h3>Dyslexia</h3><p>A learning difference that can affect reading and written language.</p></div></div>
+<div class="condition"><div class="condition-icon">☆</div><div><h3>Dyspraxia</h3><p>A condition that can affect coordination, movement and motor skills.</p></div></div>
+</div>
+</section>
+
+<section class="quote">
+<h2>Different, not less.<br><span>Unique, not unusual.</span></h2>
+</section>
+
+<section class="resources" id="resources">
+<div class="container">
+<div class="heading">
+<h2>Resources</h2>
+<p>Explore and keep learning about autism and neurodiversity.</p>
+</div>
+<div class="cards">
+<div class="card"><div class="card-icon">📖</div><h3>Learn</h3><p>Start with reliable educational information about autism and neurodiversity.</p></div>
+<div class="card"><div class="card-icon">🔎</div><h3>Explore</h3><p>Discover different neurodevelopmental conditions and experiences.</p></div>
+<div class="card"><div class="card-icon">✦</div><h3>Keep Learning</h3><p>Stay curious and continue learning about different experiences.</p></div>
+</div>
+</div>
+</section>
+
+<section id="stories">
+<div class="container">
+<div class="heading">
+<h2>Stories</h2>
+<p>Every person's experience is unique.</p>
+</div>
+<div class="story"><p>“Every star shines differently. That is what makes the night sky beautiful.”</p><small>— Project Sitara</small></div>
+<div class="story"><p>“Understanding begins with learning about experiences that may be different from our own.”</p><small>— Project Sitara</small></div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="contact-box">
+<h2>Stay Curious. Keep Learning.</h2>
+<p>Project Sitara is a growing educational space dedicated to autism awareness and neurodiversity.</p>
+<a href="https://wa.me/919654010793" class="button" target="_blank" rel="noopener noreferrer">Contact Sitara on WhatsApp ✦</a>
+</div>
+</section>
+
+<footer>
+<h3>Project <span>Sitara</span> ✦</h3>
+<p>Every star matters.</p>
+<br>
+<p>Autism Awareness • Neurodiversity</p>
+</footer>
+
+</body>
+</html>
